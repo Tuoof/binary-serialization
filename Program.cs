@@ -46,55 +46,6 @@ namespace binary_serialization
             {
                 Console.WriteLine(a.ToString());
             }
-            
-            /*
-            // XmlSerializer writes object data as XML
-            XmlSerializer serializer = new XmlSerializer(typeof(Arknight));
-            using (TextWriter tw = new StreamWriter(@"bowser.xml"))
-            {
-                //serializer.Serialize(tw, bowser);
-            }
- 
-            // Delete bowser data
-            bowser = null;
- 
-            // Deserialize from XML to the object
-            XmlSerializer deserializer = new XmlSerializer(typeof(Arknight));
-            TextReader reader = new StreamReader(@"bowser.xml");
-            object obj = deserializer.Deserialize(reader);
-            bowser = (Arknight)obj;
-            reader.Close();
- 
-            Console.WriteLine(bowser.ToString());
-            */
-            
-            /*
-            using (Stream fs = new FileStream(@"animals.xml",
-                FileMode.Create, FileAccess.Write, FileShare.None))
-            {
-                XmlSerializer serializer2 = new XmlSerializer(typeof(List<Arknight>));
-                serializer2.Serialize(fs, Characters);
-            }
- 
-            // Delete list data
-            Characters = null;
- 
-            // Read data from XML
-            XmlSerializer serializer3 = new XmlSerializer(typeof(List<Arknight>));
- 
-            using (FileStream fs2 = File.OpenRead(@"animals.xml"))
-            {
-                Characters = (List<Arknight>)serializer3.Deserialize(fs2);
-            }
- 
- 
-            foreach (Arknight a in Characters)
-            {
-                Console.WriteLine(a.ToString());
-            }
- 
-            Console.ReadLine();
-            */
         }
     }
 }
