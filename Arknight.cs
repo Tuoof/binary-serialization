@@ -19,9 +19,7 @@ namespace binary_serialization
 
         public Arknight() { }
 
-        public Arknight(string name = "No Name",
-            string Class = "No Class",
-            string Weapon = "No Weapon")
+        public Arknight(string name = "No Name", string Class = "No Class", string Weapon = "No Weapon")
         {
             this.Name = name;
             this.Class = Class;
