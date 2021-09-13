@@ -9,9 +9,6 @@ using System.IO;
 // Used to serialize an object to binary format
 using System.Runtime.Serialization.Formatters.Binary;
  
-// Used to serialize into XML
-using System.Xml.Serialization;
- 
 namespace binary_serialization
 {
     class Program
