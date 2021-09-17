@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -9,7 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace binary_serialization
 {
     // Defines that you want to serialize this class
-    [Serializable()]
+    [Serializable]
     public class Arknight : ISerializable
     {
         public string Name { get; set; }
@@ -53,6 +55,18 @@ namespace binary_serialization
             Class = (string)info.GetValue("Weight", typeof(string));
             Weapon = (string)info.GetValue("Height", typeof(string));
             ArknightID = (int)info.GetValue("AnimalID", typeof(int));
+        }
+        public IList Add_Char()
+        {
+            
+            List<Arknight> characters = new List<Arknight>
+            {
+                new Arknight("Savage", "Guard", "Hammer"),
+                new Arknight("Angelina", "Support", "Staff"),
+                new Arknight("Estelle", "Guard", "No Weapon"),
+                new Arknight("Eunectes", "Defender", "Shield and tomahawk")
+            };
+            return characters;
         }
     }
 }
